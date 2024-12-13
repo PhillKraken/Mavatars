@@ -65,7 +65,7 @@ function getTexture(block,side)
     local side = upper[side]
 
     --not full or special blocks may not have a side texture, but will have a particle texture most of the time
-    if #blockTextures[side] > 0 then
+    if blockTextures[side] and #blockTextures[side] > 0 then
         return textures:fromVanilla("blank",blockTextures[side][1]..".png")
     else
         return textures:fromVanilla("blank",blockTextures.PARTICLE[1]..".png")
